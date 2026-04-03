@@ -11,7 +11,8 @@ The repository also hosts a [Sphinx](https://www.sphinx-doc.org/)-based static d
 | [01 – JSBSim Hello World](notebooks/01_jsbsim_hello_world.ipynb) | Loading an aircraft model, initialising initial conditions, stepping the simulation, and reading JSBSim properties. |
 | [02 – JSBSim Flight Simulation](notebooks/02_jsbsim_flight_simulation.ipynb) | A longer trimmed flight simulation with time-history plots of altitude, airspeed, and attitude. |
 | [03 – PathSim Introduction](notebooks/03_pathsim_intro.ipynb) | Block-diagram modelling with PathSim: sources, integrators, amplifiers, adders, and scopes. |
-| [04 – pathsim-flight Integration](notebooks/04_pathsim_flight.ipynb) | Using `pathsim-flight`'s `JSBSimWrapper` to embed JSBSim as a PathSim block, and the `ISAtmosphere` utility. |
+| [04 – JSBSim Trim & Elevator Doublet](notebooks/04_pathsim_jsbsim_trim_elevator_doublet.ipynb) | Trimming a JSBSim FDM and applying a doublet elevator input using a PathSim `DynamicalFunction` block. |
+| [05 – pathsim-flight Integration](notebooks/05_pathsim_flight.ipynb) | Using `pathsim-flight`'s `JSBSimWrapper` to embed JSBSim as a PathSim block, and the `ISAtmosphere` utility. |
 
 ## Documentation
 
@@ -89,7 +90,8 @@ jsbsim-python-api-usage/
 │   ├── 01_jsbsim_hello_world.ipynb
 │   ├── 02_jsbsim_flight_simulation.ipynb
 │   ├── 03_pathsim_intro.ipynb
-│   └── 04_pathsim_flight.ipynb
+│   ├── 04_pathsim_jsbsim_trim_elevator_doublet.ipynb
+│   └── 05_pathsim_flight.ipynb
 └── docs/                    # Sphinx documentation source
     ├── conf.py
     ├── index.rst
