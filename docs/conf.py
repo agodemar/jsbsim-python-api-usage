@@ -33,7 +33,7 @@ extensions = [
 ]
 
 # The main document (relative to the project root, which is the source dir)
-master_doc = 'docs/index'
+master_doc = 'index'
 
 # Suppress execution: notebooks are pre-run by CI before the Sphinx build
 nbsphinx_execute = 'never'
@@ -49,11 +49,10 @@ nbsphinx_prolog = """
 
 templates_path   = ['_templates']
 exclude_patterns = [
-    'docs/_build',        # Sphinx build output
+    '_build',             # Sphinx build output
     'Thumbs.db',
     '.DS_Store',
     '**/.ipynb_checkpoints',
-    'README.md',          # project README – not part of the doc tree
 ]
 
 # Ensure .md files are processed by myst_parser

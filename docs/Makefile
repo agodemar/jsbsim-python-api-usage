@@ -5,7 +5,7 @@
 SPHINXOPTS    ?=
 SPHINXBUILD   ?= sphinx-build
 # Use the project root as the source directory so that notebooks/ is included
-SOURCEDIR     = ..
+SOURCEDIR     = .
 BUILDDIR      = _build
 
 # Put it first so that "make" without argument is like "make help".
