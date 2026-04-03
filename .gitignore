@@ -71,6 +71,8 @@ instance/
 # Sphinx documentation
 docs/_build/
 
+# Notebook execution artifacts (images saved by plt.savefig() during execution)
+notebooks/*.png
 # PyBuilder
 .pybuilder/
 target/

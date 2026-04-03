@@ -1,0 +1,108 @@
+name: Build and Deploy Docs
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+  # Allow manual triggering from the Actions tab
+  workflow_dispatch:
+
+# Allow only one concurrent deployment, skipping runs queued between the run
+# in-progress and latest queued.  However, do NOT cancel in-progress runs as
+# we want to allow these production deployments to complete.
+concurrency:
+  group: "pages"
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write   # needed to push to gh-pages branch
+
+    steps:
+      # -----------------------------------------------------------------------
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      # -----------------------------------------------------------------------
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      # -----------------------------------------------------------------------
+      - name: Install system dependencies
+        run: |
+          sudo apt-get update -q
+          sudo apt-get install -y pandoc
+
+      # -----------------------------------------------------------------------
+      - name: Install Python dependencies
+        run: |
+          pip install --upgrade pip
+          pip install \
+            jsbsim \
+            pathsim \
+            "git+https://github.com/pathsim/pathsim-flight.git" \
+            nbconvert \
+            nbsphinx \
+            sphinx \
+            sphinx-rtd-theme \
+            myst-parser \
+            matplotlib \
+            numpy \
+            pandas \
+            scipy \
+            ipykernel \
+            ipython
+
+      # -----------------------------------------------------------------------
+      - name: Execute notebooks
+        run: |
+          # Execute all notebooks in-place (saves outputs into the .ipynb files)
+          # Use --ExecutePreprocessor.timeout=600 for slow cells
+          jupyter nbconvert \
+            --to notebook \
+            --execute \
+            --inplace \
+            --ExecutePreprocessor.timeout=600 \
+            notebooks/*.ipynb
+        env:
+          # Suppress JSBSim console output
+          JSBSIM_DEBUG_LEVEL: "0"
+
+      # -----------------------------------------------------------------------
+      - name: Build Sphinx documentation
+        run: |
+          cd docs
+          make html
+
+      # -----------------------------------------------------------------------
+      - name: Upload pages artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: docs/_build/html
+
+  # ---------------------------------------------------------------------------
+  deploy:
+    # Only deploy on pushes to main (not on PRs)
+    if: github.ref == 'refs/heads/main'
+    needs: build
+    runs-on: ubuntu-latest
+
+    permissions:
+      pages: write
+      id-token: write
+
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4

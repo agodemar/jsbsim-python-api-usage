@@ -1,0 +1,27 @@
+name: jsbsim-api
+
+channels:
+  - conda-forge
+  - defaults
+
+dependencies:
+  - python=3.11
+  - jupyterlab>=4.0
+  - notebook>=7.0
+  - nbconvert>=7.0
+  - nbsphinx>=0.9
+  - sphinx>=7.0
+  - sphinx-rtd-theme>=2.0
+  - myst-parser>=2.0
+  - matplotlib>=3.7
+  - numpy>=1.24
+  - pandas>=2.0
+  - scipy>=1.11
+  - ipykernel
+  - ipython
+  - pandoc
+  - pip
+  - pip:
+      - jsbsim>=1.2
+      - pathsim>=0.20
+      - git+https://github.com/pathsim/pathsim-flight.git
