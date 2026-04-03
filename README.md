@@ -8,11 +8,11 @@ The repository also hosts a [Sphinx](https://www.sphinx-doc.org/)-based static d
 
 | Notebook | Description |
 |----------|-------------|
-| [01 – JSBSim Hello World](notebooks/01_jsbsim_hello_world.ipynb) | Loading an aircraft model, initialising initial conditions, stepping the simulation, and reading JSBSim properties. |
-| [02 – JSBSim Flight Simulation](notebooks/02_jsbsim_flight_simulation.ipynb) | A longer trimmed flight simulation with time-history plots of altitude, airspeed, and attitude. |
-| [03 – PathSim Introduction](notebooks/03_pathsim_intro.ipynb) | Block-diagram modelling with PathSim: sources, integrators, amplifiers, adders, and scopes. |
-| [04 – JSBSim Trim & Elevator Doublet](notebooks/04_pathsim_jsbsim_trim_elevator_doublet.ipynb) | Trimming a JSBSim FDM and applying a doublet elevator input using a PathSim `DynamicalFunction` block. |
-| [05 – pathsim-flight Integration](notebooks/05_pathsim_flight.ipynb) | Using `pathsim-flight`'s `JSBSimWrapper` to embed JSBSim as a PathSim block, and the `ISAtmosphere` utility. |
+| [01 – JSBSim Hello World](notebooks/01_jsbsim_hello_world.ipynb) [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/agodemar/jsbsim-python-api-usage/blob/main/notebooks/01_jsbsim_hello_world.ipynb) | Loading an aircraft model, initialising initial conditions, stepping the simulation, and reading JSBSim properties. |
+| [02 – JSBSim Flight Simulation](notebooks/02_jsbsim_flight_simulation.ipynb) [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/agodemar/jsbsim-python-api-usage/blob/main/notebooks/02_jsbsim_flight_simulation.ipynb) | A longer trimmed flight simulation with time-history plots of altitude, airspeed, and attitude. |
+| [03 – PathSim Introduction](notebooks/03_pathsim_intro.ipynb) [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/agodemar/jsbsim-python-api-usage/blob/main/notebooks/03_pathsim_intro.ipynb) | Block-diagram modelling with PathSim: sources, integrators, amplifiers, adders, and scopes. |
+| [04 – JSBSim Trim & Elevator Doublet](notebooks/04_pathsim_jsbsim_trim_elevator_doublet.ipynb) [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/agodemar/jsbsim-python-api-usage/blob/main/notebooks/04_pathsim_jsbsim_trim_elevator_doublet.ipynb) | Trimming a JSBSim FDM and applying a doublet elevator input using a PathSim `DynamicalFunction` block. |
+| [05 – pathsim-flight Integration](notebooks/05_pathsim_flight.ipynb) [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/agodemar/jsbsim-python-api-usage/blob/main/notebooks/05_pathsim_flight.ipynb) | Using `pathsim-flight`'s `JSBSimWrapper` to embed JSBSim as a PathSim block, and the `ISAtmosphere` utility. |
 
 ## Documentation
 
