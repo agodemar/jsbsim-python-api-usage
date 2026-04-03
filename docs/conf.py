@@ -18,8 +18,8 @@ sys.path.insert(0, os.path.abspath('..'))
 # -- Project information ------------------------------------------------------
 
 project   = 'JSBSim Python API Usage'
-copyright = '2024, The Authors'
-author    = 'The Authors'
+copyright = '2026, <a href="https://github.com/agodemar/">Agostino De Marco</a> (<a href="https://www.linkedin.com/in/agostino-de-marco/">LinkedIn</a>)'
+author    = 'Agostino De Marco'
 release   = '1.0'
 version   = '1.0'
 
