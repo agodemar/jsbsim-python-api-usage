@@ -61,25 +61,6 @@ jobs:
             ipython
 
       # -----------------------------------------------------------------------
-      - name: Execute notebooks
-        working-directory: notebooks
-        run: |
-          # Execute all notebooks in-place (saves outputs into the .ipynb files)
-          # Run from the notebooks/ directory so that files created by notebooks
-          # (e.g. savefig PNGs/SVGs) land next to the .ipynb files and can be
-          # read back by subsequent cells.
-          # Use --ExecutePreprocessor.timeout=1800 for slow cells (e.g. trim envelope)
-          jupyter nbconvert \
-            --to notebook \
-            --execute \
-            --inplace \
-            --ExecutePreprocessor.timeout=1800 \
-            *.ipynb
-        env:
-          # Suppress JSBSim console output
-          JSBSIM_DEBUG_LEVEL: "0"
-
-      # -----------------------------------------------------------------------
       - name: Build Sphinx documentation
         run: |
           cd docs
