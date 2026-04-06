@@ -1,4 +1,4 @@
-name: jsbsim-api
+name: jsbsim-python-examples
 
 channels:
   - conda-forge
