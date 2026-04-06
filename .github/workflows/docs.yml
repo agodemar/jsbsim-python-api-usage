@@ -65,7 +65,7 @@ jobs:
         working-directory: notebooks
         run: |
           jupyter nbconvert --to notebook --execute --inplace \
-            --ExecutePreprocessor.timeout=1800 \
+            --ExecutePreprocessor.timeout=2400 \
             *.ipynb
 
       # -----------------------------------------------------------------------
