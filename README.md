@@ -33,12 +33,12 @@ Install [Miniconda](https://docs.conda.io/en/latest/miniconda.html) or [Anaconda
 conda env create -f environment.yml
 ```
 
-This creates an environment called **`jsbsim-api`** with all required packages.
+This creates an environment called **`jsbsim-python-examples`** with all required packages.
 
 ### Activate the environment
 
 ```bash
-conda activate jsbsim-api
+conda activate jsbsim-python-examples
 ```
 
 ### Launch JupyterLab
@@ -61,13 +61,13 @@ conda env update -f environment.yml --prune
 
 ```bash
 conda deactivate
-conda env remove -n jsbsim-api
+conda env remove -n jsbsim-python-examples
 ```
 
 ## Building the documentation locally
 
 ```bash
-conda activate jsbsim-api
+conda activate jsbsim-python-examples
 
 # Run all notebooks (optional – re-executes and saves outputs in-place)
 jupyter nbconvert --to notebook --execute --inplace notebooks/*.ipynb
