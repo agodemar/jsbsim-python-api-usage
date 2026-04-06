@@ -1,9 +1,9 @@
-.. JSBSim Python API Usage documentation master file
+.. JSBSim Python Examples documentation master file
 
 .. _index:
 
-JSBSim Python API Usage
-=======================
+JSBSim Python Examples
+======================
 
 A collection of Jupyter notebooks showcasing examples of the `JSBSim`_ Python API,
 including integration with `PathSim`_, `PathView`_, and `pathsim-flight`_.

@@ -17,7 +17,7 @@ sys.path.insert(0, os.path.abspath('..'))
 
 # -- Project information ------------------------------------------------------
 
-project   = 'JSBSim Python API Usage'
+project   = 'JSBSim Python Examples'
 copyright = '2026, <a href="https://github.com/agodemar/">Agostino De Marco</a> (<a href="https://www.linkedin.com/in/agostino-de-marco-08398a7">LinkedIn</a>)'
 author    = 'Agostino De Marco'
 release   = '1.0'
@@ -74,7 +74,7 @@ html_theme_options = {
 
 html_static_path = ['_static']
 
-html_title = 'JSBSim Python API Usage'
+html_title = 'JSBSim Python Examples'
 
 # -- nbsphinx options ---------------------------------------------------------
 
