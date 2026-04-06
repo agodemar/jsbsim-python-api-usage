@@ -19,6 +19,21 @@ The repository also hosts a [Sphinx](https://www.sphinx-doc.org/)-based static d
 The rendered documentation is automatically published to GitHub Pages:
 **https://agodemar.github.io/jsbsim-python-examples/**
 
+## GitHub Codespaces
+
+The easiest way to get started is with [GitHub Codespaces](https://github.com/features/codespaces).
+Click the button below to open the repository in a ready-to-use cloud environment with Python 3.11, JupyterLab, JSBSim, and PathSim already installed:
+
+[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/agodemar/jsbsim-python-examples)
+
+Once the Codespace is ready, launch JupyterLab from the terminal:
+
+```bash
+jupyter lab
+```
+
+Then open any notebook from the `notebooks/` folder.
+
 ## Setting up the Conda Environment
 
 All examples can be run inside a dedicated [conda](https://docs.conda.io/) environment.
@@ -85,6 +100,9 @@ xdg-open _build/html/index.html  # Linux
 
 ```
 jsbsim-python-examples/
+├── .devcontainer/           # GitHub Codespaces / Dev Container configuration
+│   ├── devcontainer.json
+│   └── postCreateCommand.sh
 ├── environment.yml          # Conda environment definition
 ├── notebooks/               # Jupyter notebooks
 │   ├── 01_jsbsim_hello_world.ipynb
