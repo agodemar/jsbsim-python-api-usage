@@ -61,6 +61,14 @@ jobs:
             ipython
 
       # -----------------------------------------------------------------------
+      - name: Execute notebooks
+        working-directory: notebooks
+        run: |
+          jupyter nbconvert --to notebook --execute --inplace \
+            --ExecutePreprocessor.timeout=1800 \
+            *.ipynb
+
+      # -----------------------------------------------------------------------
       - name: Build Sphinx documentation
         run: |
           cd docs

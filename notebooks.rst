@@ -16,3 +16,4 @@ recommended reading order.
    notebooks/07_rudder_kick
    notebooks/08_thrust_vectoring_analysis
    notebooks/09_trim_envelope
+   notebooks/10_trim_envelope_climb
