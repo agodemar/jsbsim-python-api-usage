@@ -61,11 +61,17 @@ jobs:
             ipython
 
       # -----------------------------------------------------------------------
+      #- name: Execute notebooks
+      #  working-directory: notebooks
+      #    jupyter nbconvert --to notebook --execute --inplace \
+      #      --ExecutePreprocessor.timeout=2400 \
+      #      *.ipynb
+      
+      # DO NOT EXECUTE
       - name: Execute notebooks
         working-directory: notebooks
         run: |
-          jupyter nbconvert --to notebook --execute --inplace \
-            --ExecutePreprocessor.timeout=2400 \
+          jupyter nbconvert --to notebook --inplace \
             *.ipynb
 
       # -----------------------------------------------------------------------
