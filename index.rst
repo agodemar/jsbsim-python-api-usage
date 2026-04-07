@@ -44,6 +44,12 @@ The notebooks cover:
 .. _pathsim-flight: https://github.com/pathsim/pathsim-flight
 
 .. toctree::
+   :maxdepth: 2
+   :caption: Documentation
+
+   documentation/concepts/index
+
+.. toctree::
    :maxdepth: 1
    :caption: JSBSim Basics
 
