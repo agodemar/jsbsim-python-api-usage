@@ -6,7 +6,7 @@ Overview
 ========
 
 .. image:: docs/_static/logo_jsbsim_globe.svg
-   :width: 180px
+   :width: 360px
    :align: center
    :alt: JSBSim logo
 
@@ -37,7 +37,7 @@ The notebooks cover:
   simple pitch-hold autopilot.
 
 
-.. _online reference manual: https://jsbsim-team.github.io/jsbsim-reference-manual/
+.. _JSBSim online reference manual: https://jsbsim-team.github.io/jsbsim-reference-manual/
 .. _JSBSim: https://github.com/JSBSim-Team/jsbsim
 .. _PathSim: https://github.com/pathsim/pathsim
 .. _PathView: https://view.pathsim.org
