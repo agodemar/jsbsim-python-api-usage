@@ -38,7 +38,14 @@ jobs:
       - name: Install system dependencies
         run: |
           sudo apt-get update -q
-          sudo apt-get install -y pandoc
+          sudo apt-get install -y \
+            pandoc \
+            texlive-latex-base \
+            texlive-latex-recommended \
+            texlive-latex-extra \
+            texlive-fonts-recommended \
+            texlive-fonts-extra \
+            latexmk
 
       # -----------------------------------------------------------------------
       - name: Install Python dependencies
@@ -75,16 +82,29 @@ jobs:
             *.ipynb
 
       # -----------------------------------------------------------------------
-      - name: Build Sphinx documentation
+      - name: Build Sphinx documentation (HTML)
         run: |
           cd docs
           make html
+
+      # -----------------------------------------------------------------------
+      - name: Build Sphinx documentation (PDF via LaTeX)
+        run: |
+          cd docs
+          make latexpdf
 
       # -----------------------------------------------------------------------
       - name: Upload pages artifact
         uses: actions/upload-pages-artifact@v3
         with:
           path: docs/_build/html
+
+      # -----------------------------------------------------------------------
+      - name: Upload PDF artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: documentation-pdf
+          path: docs/_build/latex/JSBSimPythonExamples.pdf
 
   # ---------------------------------------------------------------------------
   deploy:
