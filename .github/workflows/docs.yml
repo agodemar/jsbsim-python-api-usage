@@ -45,7 +45,8 @@ jobs:
             texlive-latex-extra \
             texlive-fonts-recommended \
             texlive-fonts-extra \
-            latexmk
+            latexmk \
+            librsvg2-bin
 
       # -----------------------------------------------------------------------
       - name: Install Python dependencies
