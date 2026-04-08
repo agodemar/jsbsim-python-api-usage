@@ -25,7 +25,7 @@ tail, the Y-axis points toward the right wing, and Z is positive upward. A commo
 :math:`O_\mathrm{C}` is near the front of the aircraft. This frame is often denoted as
 :math:`\mathcal{F}_\mathrm{C} = \{O_\mathrm{C}, x_\mathrm{C}, y_\mathrm{C}, z_\mathrm{C}\}`.
 
-.. figure:: ../../docs/_static/concepts/frames-of-reference/ac_construction_axes.svg
+.. figure:: ../../docs/_static/concepts/frames-of-reference/ac_construction_axes.*
    :width: 90%
    :align: center
    :alt: Aircraft construction frame
@@ -57,7 +57,7 @@ with thrust axis. Positions along the axes are commonly called stations
 JSBSim mainly uses relative distances between points, so the absolute origin location is
 not critical if geometry is consistent.
 
-.. figure:: ../../docs/_static/concepts/frames-of-reference/ac_center_of_gravity.svg
+.. figure:: ../../docs/_static/concepts/frames-of-reference/ac_center_of_gravity.*
    :width: 90%
    :align: center
    :alt: Center of gravity in construction frame
@@ -65,7 +65,7 @@ not critical if geometry is consistent.
    Center of gravity (CG) position, point :math:`G`, determined in a
    construction frame.
 
-.. figure:: ../../docs/_static/concepts/frames-of-reference/c172_ground_reaction.svg
+.. figure:: ../../docs/_static/concepts/frames-of-reference/c172_ground_reaction.*
    :width: 90%
    :align: center
    :alt: Ground contact points in construction frame
@@ -73,7 +73,7 @@ not critical if geometry is consistent.
    Definition of ground contact points in terms of construction frame
    locations.
 
-.. figure:: ../../docs/_static/concepts/frames-of-reference/c172_sideview.svg
+.. figure:: ../../docs/_static/concepts/frames-of-reference/c172_sideview.*
    :width: 70%
    :align: center
    :alt: Key side-view construction points
@@ -83,7 +83,7 @@ not critical if geometry is consistent.
    of aerodynamic moments and the Empty Weight CG of the airframe. The shape
    of the wing root profile and its chord are also sketched.
 
-.. figure:: ../../docs/_static/concepts/frames-of-reference/c172_perspective_view_left.svg
+.. figure:: ../../docs/_static/concepts/frames-of-reference/c172_perspective_view_left.*
    :width: 70%
    :align: center
    :alt: Additional mass points in perspective view
@@ -105,7 +105,7 @@ frame is often written as
 * :math:`y_\mathrm{B}` points to the right wing (pitch axis),
 * :math:`z_\mathrm{B}` points downward (yaw axis direction convention in body coordinates).
 
-.. figure:: ../../docs/_static/concepts/frames-of-reference/ac_body_axes.svg
+.. figure:: ../../docs/_static/concepts/frames-of-reference/ac_body_axes.*
    :width: 90%
    :align: center
    :alt: Body frame axes
@@ -129,7 +129,7 @@ Denote it as :math:`\mathcal{F}_\mathrm{A} = \{ G, x_\mathrm{A}, y_\mathrm{A}, z
 The aerodynamic angles are angle of attack :math:`\alpha_\mathrm{B}` and sideslip
 :math:`\beta`.
 
-.. figure:: ../../docs/_static/concepts/frames-of-reference/ac_aero_axes.svg
+.. figure:: ../../docs/_static/concepts/frames-of-reference/ac_aero_axes.*
    :width: 90%
    :align: center
    :alt: Aerodynamic frame and aerodynamic angles
@@ -140,7 +140,7 @@ The aerodynamic angles are angle of attack :math:`\alpha_\mathrm{B}` and sidesli
 In JSBSim usage, the term stability frame commonly refers to this aerodynamic frame.
 Lift is aligned with :math:`-z_\mathrm{A}` and drag with the opposite wind direction.
 
-.. figure:: ../../docs/_static/concepts/frames-of-reference/three_d_forces_level_turn.svg
+.. figure:: ../../docs/_static/concepts/frames-of-reference/three_d_forces_level_turn.*
    :width: 90%
    :align: center
    :alt: Banked lift in coordinated turn
@@ -162,7 +162,7 @@ The Earth-Centered Earth-Fixed frame is
 :math:`\mathcal{F}_\mathrm{ECEF} = \{ O_\mathrm{ECEF}, x_\mathrm{ECEF}, y_\mathrm{ECEF}, z_\mathrm{ECEF} \}`.
 Its axes rotate with Earth, with angular rate :math:`\omega_\mathrm{E}`.
 
-.. figure:: ../../docs/_static/concepts/frames-of-reference/inertial_frame.svg
+.. figure:: ../../docs/_static/concepts/frames-of-reference/inertial_frame.*
    :width: 60%
    :align: center
    :alt: ECI and ECEF frames
@@ -178,7 +178,7 @@ A local tangent frame can be defined at a point :math:`O_\mathrm{E}` on Earth's 
 Here :math:`x_\mathrm{E}` points North, :math:`y_\mathrm{E}` points East,
 and :math:`z_\mathrm{E}` points Down (NED convention).
 
-.. figure:: ../../docs/_static/concepts/frames-of-reference/earth_frames.svg
+.. figure:: ../../docs/_static/concepts/frames-of-reference/earth_frames.*
    :width: 60%
    :align: center
    :alt: ECEF and local tangent frames
@@ -197,7 +197,7 @@ In this frame, weight has components :math:`(0, 0, mg)`.
 The aircraft Euler angles :math:`\psi`, :math:`\theta`, :math:`\phi`
 (3-2-1 sequence) define body orientation with respect to local NED.
 
-.. figure:: ../../docs/_static/concepts/frames-of-reference/ac_local_vertical_axes.svg
+.. figure:: ../../docs/_static/concepts/frames-of-reference/ac_local_vertical_axes.*
    :width: 90%
    :align: center
    :alt: Body and local NED frames
@@ -207,7 +207,7 @@ The aircraft Euler angles :math:`\psi`, :math:`\theta`, :math:`\phi`
    the picture), the elevation angle :math:`\theta`, and the roll angle
    :math:`\phi`.
 
-.. figure:: ../../docs/_static/concepts/frames-of-reference/ac_euler_gimbal.svg
+.. figure:: ../../docs/_static/concepts/frames-of-reference/ac_euler_gimbal.*
    :width: 60%
    :align: center
    :alt: Aircraft Euler angle sequence
@@ -235,7 +235,7 @@ uses:
 Drag and lift in wind axes satisfy :math:`X_\mathrm{W} = -D` and :math:`Z_\mathrm{W} = -L`.
 When :math:`\beta = 0`, wind and aerodynamic frames coincide.
 
-.. figure:: ../../docs/_static/concepts/frames-of-reference/three_d_definitions.svg
+.. figure:: ../../docs/_static/concepts/frames-of-reference/three_d_definitions.*
    :width: 90%
    :align: center
    :alt: Standard flight mechanics reference frames
