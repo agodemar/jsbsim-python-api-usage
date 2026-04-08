@@ -80,3 +80,26 @@ html_title = 'JSBSim Python Examples'
 
 # Timeout for notebook execution (seconds); only used when nbsphinx_execute != 'never'
 nbsphinx_timeout = 600
+
+# -- Options for LaTeX/PDF output ---------------------------------------------
+
+latex_engine = 'pdflatex'
+
+latex_elements = {
+    'papersize': 'a4paper',
+    'pointsize': '10pt',
+    'preamble': r'''
+\usepackage{amsmath}
+\usepackage{amssymb}
+''',
+}
+
+latex_documents = [
+    (
+        master_doc,
+        'JSBSimPythonExamples.tex',
+        'JSBSim Python Examples',
+        'Agostino De Marco',
+        'manual',
+    ),
+]
