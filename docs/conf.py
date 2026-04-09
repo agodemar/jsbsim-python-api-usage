@@ -88,9 +88,11 @@ latex_engine = 'pdflatex'
 latex_elements = {
     'papersize': 'a4paper',
     'pointsize': '10pt',
+    'inputenc': r'\usepackage[utf8]{inputenc}',
     'preamble': r'''
 \usepackage{amsmath}
 \usepackage{amssymb}
+\usepackage{textgreek}
 ''',
 }
 
