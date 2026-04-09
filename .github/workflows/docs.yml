@@ -92,7 +92,7 @@ jobs:
       - name: Build Sphinx documentation (PDF via LaTeX)
         run: |
           cd docs
-          make latexpdf
+          make latexpdf LATEXOPTS="-interaction=nonstopmode"
 
       # -----------------------------------------------------------------------
       - name: Upload pages artifact
