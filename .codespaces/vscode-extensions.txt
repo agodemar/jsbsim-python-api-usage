@@ -1,0 +1,21 @@
+# VS Code extensions (id@version)
+dbaeumer.vscode-eslint@3.0.24
+github.codespaces@1.18.12
+github.copilot-chat@0.43.0
+github.github-vscode-theme@6.3.5
+github.vscode-github-actions@0.31.3
+github.vscode-pull-request-github@0.134.0
+james-yu.latex-workshop@10.14.1
+mechatroner.rainbow-csv@3.24.1
+ms-ceintl.vscode-language-pack-it@1.110.2026041011
+ms-python.autopep8@2025.2.0
+ms-python.debugpy@2025.18.0
+ms-python.python@2026.4.0
+ms-python.vscode-pylance@2026.2.1
+ms-python.vscode-python-envs@1.26.0
+ms-toolsai.jupyter@2025.9.1
+ms-toolsai.jupyter-keymap@1.1.2
+ms-toolsai.jupyter-renderers@1.3.0
+ms-toolsai.vscode-jupyter-cell-tags@0.1.9
+ms-toolsai.vscode-jupyter-slideshow@0.1.6
+ms-vscode.makefile-tools@0.12.17
