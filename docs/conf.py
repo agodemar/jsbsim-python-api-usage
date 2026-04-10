@@ -89,10 +89,10 @@ latex_elements = {
     'papersize': 'a4paper',
     'pointsize': '10pt',
     'preamble': r'''
+\usepackage[T1]{fontenc}
 \usepackage[utf8]{inputenc}
-\usepackage{amsmath}
-\usepackage{amssymb}
-% Greek letters
+
+% === GREEK LETTERS, ETC
 \DeclareUnicodeCharacter{0394}{\ensuremath{\Delta}}
 \DeclareUnicodeCharacter{03B1}{\ensuremath{\alpha}}
 \DeclareUnicodeCharacter{03B4}{\ensuremath{\delta}}
@@ -129,6 +129,48 @@ latex_elements = {
 \DeclareUnicodeCharacter{1E8B}{\ensuremath{\dot{x}}}
 \DeclareUnicodeCharacter{1E8D}{\ensuremath{\ddot{x}}}
 \DeclareUnicodeCharacter{1E8F}{\ensuremath{\dot{y}}}
+
+% === FONTS
+\usepackage{pifont} % for dingbats
+\usepackage{marvosym} % for \Keyboard etc
+% \usepackage{lmodern}
+% \usepackage{newtxtext}
+\usepackage[osf]{erewhon}% extension of Utopia, osf=old-style-figures
+\usepackage[varqu,varl]{inconsolata}% sans typewriter
+\usepackage[scaled=.95]{cabin}% sans serif
+\usepackage[utopia,vvarbb]{newtxmath}
+\usepackage{textcomp}% AFTER newtxtext to avoid clashes
+
+% === MATH
+\usepackage[intlimits]{amsmath}
+\usepackage{amsfonts}
+\usepackage{amsbsy}
+\usepackage{fixmath}
+\usepackage{mathtools}
+\usepackage{amssymb}
+
+% === UNITS
+\usepackage{siunitx}
+\sisetup{
+  inter-unit-product={\,},
+  number-unit-product={\,},
+  output-decimal-marker = {.},
+  exponent-product={\cdot},
+  group-separator={},
+  group-four-digits=false,
+  round-mode=places,
+}
+\DeclareSIUnit\inch{in}
+\DeclareSIUnit\foot{ft}
+\DeclareSIUnit\feet{ft}
+\DeclareSIUnit\lb{lb}
+\DeclareSIUnit\lbf{lbf}
+\DeclareSIUnit\slug{slug}
+\DeclareSIUnit\rankine{\ensuremath{^\circ}R}
+\DeclareSIUnit\fahrenheit{\ensuremath{^\circ}F}
+\DeclareSIUnit\kilopond{kg\ensuremath{_\mathrm{f}}}
+\DeclareSIUnit\knots{kts}
+
 ''',
 }
 
