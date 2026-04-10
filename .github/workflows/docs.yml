@@ -71,6 +71,7 @@ jobs:
       # -----------------------------------------------------------------------
       - name: Save CI environment lockfile
         run: |
+          mkdir -p docs/_build
           pip freeze > docs/_build/pip-freeze-ci.txt
 
       # -----------------------------------------------------------------------
