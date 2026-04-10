@@ -88,6 +88,11 @@ latex_engine = 'pdflatex'
 latex_elements = {
     'papersize': 'a4paper',
     'pointsize': '10pt',
+    'maketitle': r'''
+\sphinxmaketitle
+\tableofcontents
+\listoffigures
+''',
     'preamble': r'''
 \usepackage[T1]{fontenc}
 \usepackage[utf8]{inputenc}
