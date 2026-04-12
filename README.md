@@ -18,13 +18,11 @@ Click the button below to open the repository in a ready-to-use cloud environmen
 
 [![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/agodemar/jsbsim-python-examples)
 
-Once the Codespace is ready, launch JupyterLab from the terminal:
+Once in Codespaces, wait for the environments to initialize.
+Actually you have to wait for `postCreateCommand.sh` to complete its task before starting any interaction with the system. Watch the terminal.
 
-```bash
-jupyter lab
-```
-
-Then open any notebook from the `notebooks/` folder.
+Codespace provides an instance of [VS Code](https://code.visualstudio.com/) working in the browser with all the extensions you needed to render and run the Jupyter notebooks within the editor.
+So, Just wait that the environement fully comes alive then with VS Code browse through the notebooks in the `notebooks/` folder, and run them.
 
 ## Setting up the Conda Environment
 
