@@ -41,10 +41,12 @@ nbsphinx_execute = 'never'
 # Allow errors in notebooks so the doc build doesn't fail on import issues
 nbsphinx_allow_errors = True
 
-# Custom prolog that appears above every notebook page
-nbsphinx_prolog = """
-.. note::
-   This page was generated from a Jupyter notebook.
+# Custom prolog shown only in HTML (excluded from LaTeX/PDF)
+nbsphinx_prolog = r"""
+.. only:: html
+
+    .. note::
+        This page was generated from a Jupyter notebook.
 """
 
 templates_path   = ['_templates']
@@ -92,12 +94,18 @@ latex_elements = {
 \sphinxmaketitle
 ''',
     'tableofcontents': r'''
+\setcounter{tocdepth}{3}
+\setcounter{secnumdepth}{3}
 \sphinxtableofcontents
 \listoffigures
 ''',
     'preamble': r'''
 \usepackage[T1]{fontenc}
 \usepackage[utf8]{inputenc}
+
+% Increase ToC depth by one level (down to subsubsection)
+\setcounter{tocdepth}{3}
+\setcounter{secnumdepth}{3}
 
 % === GREEK LETTERS, ETC
 \DeclareUnicodeCharacter{0394}{\ensuremath{\Delta}}
