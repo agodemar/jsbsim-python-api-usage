@@ -54,6 +54,7 @@ The notebooks cover:
    :caption: JSBSim Basics
 
    notebooks/01_jsbsim_hello_world
+   notebooks/01b_hello_ballx
    notebooks/02_jsbsim_flight_simulation
 
 .. toctree::

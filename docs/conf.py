@@ -9,6 +9,7 @@
 # which calls: sphinx-build -M html .. _build -c .
 
 import os
+import subprocess
 import sys
 
 # -- Path setup ---------------------------------------------------------------
@@ -75,6 +76,7 @@ html_theme_options = {
 }
 
 html_static_path = ['_static']
+html_css_files = ['custom.css']
 
 html_title = 'JSBSim <em>by</em> Python Examples'
 
@@ -194,3 +196,46 @@ latex_documents = [
         'manual',
     ),
 ]
+
+# -- Auto-convert notebooks to bare HTML for inline inclusion -----------------
+#
+# Notebooks listed here are converted with ``nbconvert --template basic``
+# (no full HTML page wrapper) and written to docs/_static/ so that .rst files
+# can embed them via ``.. raw:: html`` / ``:file:``.
+
+_NOTEBOOKS_TO_CONVERT = [
+    'notebooks/01b_hello_ballx.ipynb',
+]
+
+def _convert_notebooks_to_bare_html(app):
+    """Convert selected notebooks to bare HTML before the Sphinx build starts."""
+    # Sphinx source dir is the project root (one level above docs/)
+    project_root = os.path.abspath(os.path.join(os.path.dirname(__file__), '..'))
+    static_dir = os.path.join(os.path.dirname(__file__), '_static')
+    os.makedirs(static_dir, exist_ok=True)
+
+    for nb_rel in _NOTEBOOKS_TO_CONVERT:
+        nb_path = os.path.join(project_root, nb_rel)
+        if not os.path.isfile(nb_path):
+            print(f'[conf.py] WARNING: notebook not found, skipping: {nb_path}')
+            continue
+        result = subprocess.run(
+            [
+                sys.executable, '-m', 'nbconvert',
+                '--to', 'html',
+                '--template', 'basic',
+                '--output-dir', static_dir,
+                nb_path,
+            ],
+            capture_output=True,
+            text=True,
+        )
+        if result.returncode != 0:
+            print(f'[conf.py] WARNING: nbconvert failed for {nb_path}:\n{result.stderr}')
+        else:
+            out_name = os.path.splitext(os.path.basename(nb_path))[0] + '.html'
+            print(f'[conf.py] Converted {nb_rel} -> _static/{out_name}')
+
+
+def setup(app):
+    app.connect('builder-inited', lambda app: _convert_notebooks_to_bare_html(app))

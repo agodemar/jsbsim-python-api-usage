@@ -1,0 +1,25 @@
+/* Constrain inline-embedded notebook HTML to the page content width */
+.nb-inline-embed {
+    max-width: 100%;
+    overflow-x: auto;
+    box-sizing: border-box;
+}
+
+.nb-inline-embed pre,
+.nb-inline-embed code,
+.nb-inline-embed table,
+.nb-inline-embed img,
+.nb-inline-embed svg,
+.nb-inline-embed .output_png,
+.nb-inline-embed .output_jpeg,
+.nb-inline-embed .output_html,
+.nb-inline-embed .output_subarea {
+    max-width: 100%;
+    overflow-x: auto;
+    box-sizing: border-box;
+}
+
+.nb-inline-embed img,
+.nb-inline-embed svg {
+    height: auto;
+}

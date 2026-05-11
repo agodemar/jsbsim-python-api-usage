@@ -105,3 +105,20 @@ component, ``fcs/pitch-command-scale``, which is given the property name,
 So, now we have a way to access many parameters inside JSBSim. We know how the
 FCS is assembled in JSBSim. The same components used in the FCS are also
 available to build an autopilot, or other system.
+
+Example notebook
+-----------------
+
+See notebook: :doc:`/notebooks/01b_hello_ballx`.
+
+.. raw:: html
+
+   <div class="nb-inline-embed">
+
+.. raw:: html
+   :file: ../../docs/_static/01b_hello_ballx.html
+
+.. raw:: html
+
+   </div>
+
